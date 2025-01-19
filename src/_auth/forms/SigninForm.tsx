@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const SigninForm = () => {
   return (
     <div>
-      SigninForm
+      <p>SigninForm</p>
     </div>
-  )
-}
+  );
+};
 
-export default SigninForm
+export default SigninForm;
