@@ -64,16 +64,12 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    // Only check auth for protected routes
-    if (
-      !window.location.pathname.includes("/sign-in") &&
-      !window.location.pathname.includes("/sign-up")
-    ) {
-      if (localStorage.getItem("cookieFallback") === "[]") {
+    // Only check auth for protected routes 
+      if (localStorage.getItem("cookieFallback") === "[]" ||
+         localStorage.getItem("cookieFallback") === null) {
         navigate("/sign-in");
       }
       checkAuthUser();
-    }
   }, []);
 
   const value = {

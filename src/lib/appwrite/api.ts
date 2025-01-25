@@ -6,7 +6,6 @@ import {
   databases,
 } from "@/lib/appwrite/config";
 import { INewUser } from "@/types";
-import { string } from "zod";
 
 export async function createUserAccount(user: INewUser) {
   try {
